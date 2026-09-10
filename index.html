@@ -1,75 +1,69 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <title>Movie Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="navbar">
-    <div class="logo">MY<span>WEB</span></div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>🎬 MOVIE HUB</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#movies">Movies</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="tag">WELCOME TO MY WEBSITE</p>
-        <h1>अपनी <span>पहली वेबसाइट</span> में आपका स्वागत है</h1>
-        <p class="subtitle">
-          यह एक modern, responsive और mobile-friendly वेबसाइट है।
-          इसे आप अपनी पसंद के हिसाब से बदल सकते हैं।
-        </p>
-        <a class="btn" href="#about">शुरू करें</a>
-      </div>
-    </section>
+<section id="home" class="hero">
+  <h2>आपका स्वागत है Movie Hub में</h2>
+  <p>नई फिल्मों की जानकारी, ट्रेलर और बहुत कुछ एक ही जगह।</p>
+  <a href="#movies" class="btn">Movies देखें</a>
+</section>
 
-    <section id="about" class="section">
-      <h2>मेरे बारे में</h2>
-      <p>
-        यह आपकी पहली वेबसाइट का About section है।
-        यहाँ आप अपने बारे में, अपने काम या अपने brand के बारे में लिख सकते हैं।
-      </p>
-    </section>
+<section id="movies" class="movies">
+  <h2>🔥 Latest Movies</h2>
 
-    <section id="services" class="section">
-      <h2>हम क्या करते हैं?</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="icon">💻</div>
-          <h3>Web Design</h3>
-          <p>Simple और attractive वेबसाइट design.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📱</div>
-          <h3>Mobile Friendly</h3>
-          <p>मोबाइल और कंप्यूटर दोनों पर responsive design.</p>
-        </div>
-        <div class="card">
-          <div class="icon">⚡</div>
-          <h3>Fast Website</h3>
-          <p>हल्की और जल्दी load होने वाली वेबसाइट.</p>
-        </div>
-      </div>
-    </section>
+  <div class="movie-container">
 
-    <section id="contact" class="section contact">
-      <h2>Contact</h2>
-      <p>नीचे अपना email या social media link डाल सकते हैं।</p>
-      <a class="btn" href="mailto:youremail@example.com">Email करें</a>
-    </section>
-  </main>
+    <div class="movie-card">
+      <div class="poster">🎬</div>
+      <h3>Mirzapur</h3>
+      <p>Crime • Drama</p>
+      <button>Details</button>
+    </div>
 
-  <footer>
-    <p>© 2026 My Web. All Rights Reserved.</p>
-  </footer>
+    <div class="movie-card">
+      <div class="poster">🍿</div>
+      <h3>Movie 2</h3>
+      <p>Action • Drama</p>
+      <button>Details</button>
+    </div>
+
+    <div class="movie-card">
+      <div class="poster">🎥</div>
+      <h3>Movie 3</h3>
+      <p>Thriller • Action</p>
+      <button>Details</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About Movie Hub</h2>
+  <p>
+    Movie Hub एक movie information website है,
+    जहाँ आपको फिल्मों की जानकारी और trailers मिलेंगे।
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Movie Hub</p>
+</footer>
 
 </body>
 </html>
