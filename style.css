@@ -405,3 +405,36 @@ footer {
     }
 
 }
+/* ===== MOBILE FIX ===== */
+
+body {
+    overflow-x: hidden;
+}
+
+.main-btn {
+    display: inline-block !important;
+    background: #ff1010 !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 16px 35px !important;
+    border-radius: 8px !important;
+    font-size: 21px;
+}
+
+.movie-container {
+    width: 100%;
+}
+
+.movie-card {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
