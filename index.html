@@ -1,289 +1,375 @@
-        
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Movie Hub - Latest Movies</title>
+    <title>Movie Hub - Movies & Trailers</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<header class="header">
 
-    <header class="header">
+    <div class="logo">
+        <span>🎬</span>
+        <h1>MOVIE HUB</h1>
+    </div>
 
-        <div class="logo">
-            <span>🎬</span>
-            <h1>MOVIE HUB</h1>
-        </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#about">About</a>
+    </nav>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#movies">Movies</a>
-            <a href="#about">About</a>
-        </nav>
+</header>
 
-    </header>
 
+<!-- HOME -->
 
-    <!-- ================= HOME ================= -->
+<section id="home" class="hero">
 
-    <section id="home" class="hero">
+    <div class="hero-content">
 
-        <div class="hero-content">
-
-            <h2>आपका स्वागत है Movie Hub में</h2>
-
-            <p>
-                नई फिल्मों की जानकारी, ट्रेलर और बहुत कुछ एक ही जगह।
-            </p>
-
-            <a href="#movies" class="main-btn">
-                Movies देखें
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= MOVIES ================= -->
-
-    <section id="movies" class="movies-section">
-
-        <h2 class="section-title">
-            🔥 Latest Movies
-        </h2>
-
-
-        <div class="movie-container">
-
-
-            <!-- MOVIE 1 -->
-
-            <div class="movie-card">
-
-                <img
-                    src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
-                    alt="Deadpool & Wolverine">
-
-                <div class="movie-info">
-
-                    <h3>Deadpool & Wolverine</h3>
-
-                    <p class="details">
-                        2024 • Action • Comedy
-                    </p>
-
-                    <p class="rating">
-                        ⭐ 8.0/10
-                    </p>
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=Deadpool+%26+Wolverine+official+trailer"
-                        target="_blank"
-                        class="trailer-btn">
-                        ▶ Watch Trailer
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- MOVIE 2 -->
-
-            <div class="movie-card">
-
-                <img
-                    src="https://image.tmdb.org/t/p/w500/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg"
-                    alt="Inside Out 2">
-
-                <div class="movie-info">
-
-                    <h3>Inside Out 2</h3>
-
-                    <p class="details">
-                        2024 • Animation • Comedy
-                    </p>
-
-                    <p class="rating">
-                        ⭐ 7.6/10
-                    </p>
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=Inside+Out+2+official+trailer"
-                        target="_blank"
-                        class="trailer-btn">
-                        ▶ Watch Trailer
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- MOVIE 3 -->
-
-            <div class="movie-card">
-
-                <img
-                    src="https://image.tmdb.org/t/p/w500/8c8Dih2v8oY9h2Kq2d2n6pZf9pB.jpg"
-                    alt="Kingdom of the Planet of the Apes">
-
-                <div class="movie-info">
-
-                    <h3>Kingdom of the Planet of the Apes</h3>
-
-                    <p class="details">
-                        2024 • Action • Sci-Fi
-                    </p>
-
-                    <p class="rating">
-                        ⭐ 7.0/10
-                    </p>
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=Kingdom+Planet+Apes+official+trailer"
-                        target="_blank"
-                        class="trailer-btn">
-                        ▶ Watch Trailer
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- MOVIE 4 -->
-
-            <div class="movie-card">
-
-                <img
-                    src="https://image.tmdb.org/t/p/w500/qhb1qOilapbapxWQn9jtRCMwXJF.jpg"
-                    alt="Wonka">
-
-                <div class="movie-info">
-
-                    <h3>Wonka</h3>
-
-                    <p class="details">
-                        2023 • Fantasy • Family
-                    </p>
-
-                    <p class="rating">
-                        ⭐ 7.1/10
-                    </p>
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=Wonka+official+trailer"
-                        target="_blank"
-                        class="trailer-btn">
-                        ▶ Watch Trailer
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- MOVIE 5 -->
-
-            <div class="movie-card">
-
-                <img
-                    src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
-                    alt="Action Movie">
-
-                <div class="movie-info">
-
-                    <h3>Action Special</h3>
-
-                    <p class="details">
-                        2024 • Action • Adventure
-                    </p>
-
-                    <p class="rating">
-                        ⭐ 8.2/10
-                    </p>
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=best+action+movie+trailer"
-                        target="_blank"
-                        class="trailer-btn">
-                        ▶ Watch Trailer
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- MOVIE 6 -->
-
-            <div class="movie-card">
-
-                <img
-                    src="https://image.tmdb.org/t/p/w500/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg"
-                    alt="Comedy Movie">
-
-                <div class="movie-info">
-
-                    <h3>Comedy Special</h3>
-
-                    <p class="details">
-                        2024 • Comedy • Family
-                    </p>
-
-                    <p class="rating">
-                        ⭐ 7.8/10
-                    </p>
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=latest+comedy+movie+trailer"
-                        target="_blank"
-                        class="trailer-btn">
-                        ▶ Watch Trailer
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="about-section">
-
-        <h2>ℹ️ About Movie Hub</h2>
+        <h2>आपका स्वागत है Movie Hub में</h2>
 
         <p>
-            Movie Hub एक simple movie information website है।
-            यहाँ आपको फिल्मों की जानकारी, rating, genre और
-            official trailers के links मिलेंगे।
+            अपनी पसंद की Movies खोजें, जानकारी देखें और Official Trailer देखें।
         </p>
 
-    </section>
+        <a href="#movies" class="main-btn">
+            🎬 Movies देखें
+        </a>
+
+    </div>
+
+</section>
 
 
-    <!-- ================= FOOTER ================= -->
+<!-- MOVIES -->
 
-    <footer>
+<section id="movies" class="movies-section">
 
-        <p>
-            © 2026 Movie Hub | Made with ❤️
-        </p>
+    <h2 class="section-title">
+        🔥 Movie Collection
+    </h2>
 
-    </footer>
 
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔎 Movie का नाम खोजें..."
+        >
+
+    </div>
+
+
+    <!-- CATEGORY -->
+
+    <div class="categories">
+
+        <button class="category-btn active" data-category="All">
+            All
+        </button>
+
+        <button class="category-btn" data-category="Action">
+            Action
+        </button>
+
+        <button class="category-btn" data-category="Comedy">
+            Comedy
+        </button>
+
+        <button class="category-btn" data-category="Animation">
+            Animation
+        </button>
+
+        <button class="category-btn" data-category="Fantasy">
+            Fantasy
+        </button>
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <p id="noResults" class="no-results">
+        😕 Movie नहीं मिली।
+    </p>
+
+
+    <!-- MOVIE CONTAINER -->
+
+    <div class="movie-container">
+
+
+        <!-- MOVIE 1 -->
+
+        <div
+            class="movie-card"
+            data-title="Deadpool Wolverine"
+            data-category="Action"
+        >
+
+            <img
+                src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+                alt="Deadpool & Wolverine"
+            >
+
+            <div class="movie-info">
+
+                <h3>Deadpool & Wolverine</h3>
+
+                <p class="details">
+                    2024 • Action • Comedy
+                </p>
+
+                <p class="rating">
+                    ⭐ 8.0/10
+                </p>
+
+                <a
+                    href="https://www.youtube.com/results?search_query=Deadpool+%26+Wolverine+official+trailer"
+                    target="_blank"
+                    class="trailer-btn"
+                >
+                    ▶ Watch Trailer
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOVIE 2 -->
+
+        <div
+            class="movie-card"
+            data-title="Inside Out 2"
+            data-category="Animation"
+        >
+
+            <img
+                src="https://image.tmdb.org/t/p/w500/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg"
+                alt="Inside Out 2"
+            >
+
+            <div class="movie-info">
+
+                <h3>Inside Out 2</h3>
+
+                <p class="details">
+                    2024 • Animation • Comedy
+                </p>
+
+                <p class="rating">
+                    ⭐ 7.6/10
+                </p>
+
+                <a
+                    href="https://www.youtube.com/results?search_query=Inside+Out+2+official+trailer"
+                    target="_blank"
+                    class="trailer-btn"
+                >
+                    ▶ Watch Trailer
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOVIE 3 -->
+
+        <div
+            class="movie-card"
+            data-title="Kingdom Planet Apes"
+            data-category="Action"
+        >
+
+            <img
+                src="https://image.tmdb.org/t/p/w500/8c8Dih2v8oY9h2Kq2d2n6pZf9pB.jpg"
+                alt="Kingdom of the Planet of the Apes"
+            >
+
+            <div class="movie-info">
+
+                <h3>Kingdom of the Planet of the Apes</h3>
+
+                <p class="details">
+                    2024 • Action • Sci-Fi
+                </p>
+
+                <p class="rating">
+                    ⭐ 7.0/10
+                </p>
+
+                <a
+                    href="https://www.youtube.com/results?search_query=Kingdom+Planet+Apes+official+trailer"
+                    target="_blank"
+                    class="trailer-btn"
+                >
+                    ▶ Watch Trailer
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOVIE 4 -->
+
+        <div
+            class="movie-card"
+            data-title="Wonka"
+            data-category="Fantasy"
+        >
+
+            <img
+                src="https://image.tmdb.org/t/p/w500/qhb1qOilapbapxWQn9jtRCMwXJF.jpg"
+                alt="Wonka"
+            >
+
+            <div class="movie-info">
+
+                <h3>Wonka</h3>
+
+                <p class="details">
+                    2023 • Fantasy • Family
+                </p>
+
+                <p class="rating">
+                    ⭐ 7.1/10
+                </p>
+
+                <a
+                    href="https://www.youtube.com/results?search_query=Wonka+official+trailer"
+                    target="_blank"
+                    class="trailer-btn"
+                >
+                    ▶ Watch Trailer
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOVIE 5 -->
+
+        <div
+            class="movie-card"
+            data-title="Action Special"
+            data-category="Action"
+        >
+
+            <img
+                src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+                alt="Action Special"
+            >
+
+            <div class="movie-info">
+
+                <h3>Action Special</h3>
+
+                <p class="details">
+                    2024 • Action • Adventure
+                </p>
+
+                <p class="rating">
+                    ⭐ 8.2/10
+                </p>
+
+                <a
+                    href="https://www.youtube.com/results?search_query=best+action+movie+trailer"
+                    target="_blank"
+                    class="trailer-btn"
+                >
+                    ▶ Watch Trailer
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOVIE 6 -->
+
+        <div
+            class="movie-card"
+            data-title="Comedy Special"
+            data-category="Comedy"
+        >
+
+            <img
+                src="https://image.tmdb.org/t/p/w500/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg"
+                alt="Comedy Special"
+            >
+
+            <div class="movie-info">
+
+                <h3>Comedy Special</h3>
+
+                <p class="details">
+                    2024 • Comedy • Family
+                </p>
+
+                <p class="rating">
+                    ⭐ 7.8/10
+                </p>
+
+                <a
+                    href="https://www.youtube.com/results?search_query=latest+comedy+movie+trailer"
+                    target="_blank"
+                    class="trailer-btn"
+                >
+                    ▶ Watch Trailer
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about-section">
+
+    <h2>ℹ️ About Movie Hub</h2>
+
+    <p>
+        Movie Hub एक movie information website है।
+        यहाँ movies की जानकारी, rating, genre और
+        official trailers के links मिलते हैं।
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Movie Hub | Made with ❤️
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
 
 </body>
 </html>
