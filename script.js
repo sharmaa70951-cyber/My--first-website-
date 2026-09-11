@@ -1,48 +1,141 @@
+const API_KEY = 9337b42f49166a7db60c29bb99b03fb5
+
+
 const searchInput = document.getElementById("searchInput");
-const movieCards = document.querySelectorAll(".movie-card");
-const categoryButtons = document.querySelectorAll(".category-btn");
+const movieContainer = document.querySelector(".movie-container");
 const noResults = document.getElementById("noResults");
 
-let selectedCategory = "All";
+let timer;
 
-function filterMovies() {
-    const searchText = searchInput.value.toLowerCase().trim();
-    let count = 0;
+searchInput.addEventListener("input", () => {
+    clearTimeout(timer);
 
-    movieCards.forEach(card => {
-        const title = card.dataset.title.toLowerCase();
-        const category = card.dataset.category;
+    const query = searchInput.value.trim();
 
-        const searchMatch = title.includes(searchText);
-        const categoryMatch =
-            selectedCategory === "All" ||
-            category === selectedCategory;
+    if (!query) {
+        movieContainer.innerHTML = "";
+        noResults.style.display = "none";
+        return;
+    }
 
-        if (searchMatch && categoryMatch) {
-            card.style.display = "block";
-            count++;
-        } else {
-            card.style.display = "none";
+    timer = setTimeout(() => {
+        searchMovies(query);
+    }, 400);
+});
+
+
+async function searchMovies(query) {
+
+    try {
+
+        movieContainer.innerHTML =
+            `<p style="text-align:center;">🔎 Search हो रहा है...</p>`;
+
+        const url =
+            `https://api.themoviedb.org/3/search/multi` +
+            `?api_key=${API_KEY}` +
+            `&query=${encodeURIComponent(query)}` +
+            `&language=hi-IN` +
+            `&include_adult=false`;
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("API Error");
         }
-    });
 
-    noResults.style.display =
-        count === 0 ? "block" : "none";
-}
+        const data = await response.json();
 
-searchInput.addEventListener("input", filterMovies);
-
-categoryButtons.forEach(button => {
-    button.addEventListener("click", () => {
-
-        categoryButtons.forEach(btn =>
-            btn.classList.remove("active")
+        const results = data.results.filter(item =>
+            item.media_type === "movie" ||
+            item.media_type === "tv"
         );
 
-        button.classList.add("active");
+        displayMovies(results);
 
-        selectedCategory = button.dataset.category;
+    } catch (error) {
 
-        filterMovies();
+        console.error(error);
+
+        movieContainer.innerHTML =
+            `<p style="text-align:center;">
+                ❌ Movies load नहीं हो पाईं।
+            </p>`;
+    }
+}
+
+
+function displayMovies(movies) {
+
+    movieContainer.innerHTML = "";
+
+    if (movies.length === 0) {
+
+        noResults.style.display = "block";
+        return;
+
+    }
+
+    noResults.style.display = "none";
+
+    movies.forEach(movie => {
+
+        const title =
+            movie.title ||
+            movie.name ||
+            "Unknown";
+
+        const date =
+            movie.release_date ||
+            movie.first_air_date ||
+            "";
+
+        const year =
+            date ? date.substring(0, 4) : "N/A";
+
+        const poster = movie.poster_path
+            ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+            : "https://via.placeholder.com/500x750?text=No+Poster";
+
+        const rating =
+            movie.vote_average
+                ? movie.vote_average.toFixed(1)
+                : "N/A";
+
+        const card = document.createElement("div");
+
+        card.className = "movie-card";
+
+        card.innerHTML = `
+
+            <img
+                src="${poster}"
+                alt="${title}"
+            >
+
+            <div class="movie-info">
+
+                <h3>${title}</h3>
+
+                <p class="details">
+                    ${year} • ${movie.media_type === "tv" ? "TV" : "Movie"}
+                </p>
+
+                <p class="rating">
+                    ⭐ ${rating}/10
+                </p>
+
+                <a
+                    href="https://www.youtube.com/results?search_query=${encodeURIComponent(title + " official trailer")}"
+                    target="_blank"
+                    class="trailer-btn"
+                >
+                    ▶ Watch Trailer
+                </a>
+
+            </div>
+        `;
+
+        movieContainer.appendChild(card);
     });
-});
+}
